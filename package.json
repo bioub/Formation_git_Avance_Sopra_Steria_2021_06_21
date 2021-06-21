@@ -1,9 +1,14 @@
 {
   "devDependencies": {
     "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.3.1"
   },
   "scripts": {
-    "prepare": "husky install hooks"
+    "prepare": "husky install hooks",
+    "format": "prettier --write \"**/*.{json,md}\""
+  },
+  "lint-staged": {
+    "*.{json,md}": "prettier --write"
   }
 }
